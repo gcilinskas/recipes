@@ -23,6 +23,11 @@ class User implements UserInterface
     private $email;
 
     /**
+     * @ORM\Column(type="string", length=180, nullable=true)
+     */
+    private $username;
+
+    /**
      * @ORM\Column(type="json")
      */
     private $roles = [];
@@ -51,13 +56,23 @@ class User implements UserInterface
     }
 
     /**
-     * A visual identifier that represents this user.
-     *
-     * @see UserInterface
+     * @return string
      */
     public function getUsername(): string
     {
-        return (string) $this->email;
+        return $this->username;
+    }
+
+    /**
+     * @param mixed $username
+     *
+     * @return User
+     */
+    public function setUsername($username): User
+    {
+        $this->username = $username;
+
+        return $this;
     }
 
     /**
@@ -65,11 +80,7 @@ class User implements UserInterface
      */
     public function getRoles(): array
     {
-        $roles = $this->roles;
-        // guarantee every user at least has ROLE_USER
-        $roles[] = 'ROLE_USER';
-
-        return array_unique($roles);
+        return $this->roles;
     }
 
     public function setRoles(array $roles): self
@@ -84,9 +95,14 @@ class User implements UserInterface
      */
     public function getPassword(): string
     {
-        return (string) $this->password;
+        return $this->password;
     }
 
+    /**
+     * @param string $password
+     *
+     * @return $this
+     */
     public function setPassword(string $password): self
     {
         $this->password = $password;
@@ -94,20 +110,12 @@ class User implements UserInterface
         return $this;
     }
 
-    /**
-     * @see UserInterface
-     */
     public function getSalt()
     {
-        // not needed when using the "bcrypt" algorithm in security.yaml
+        return null;
     }
 
-    /**
-     * @see UserInterface
-     */
     public function eraseCredentials()
     {
-        // If you store any temporary, sensitive data on the user, clear it here
-        // $this->plainPassword = null;
     }
 }

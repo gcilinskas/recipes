@@ -8,6 +8,8 @@
 /public/bundles/
 /var/
 /var/cache
+/var/log
+/var/logs
 /var
 /vendor/
 /docker/.data
@@ -16,3 +18,4 @@
 ###< symfony/framework-bundle ###
 var
 vendor
+var/log/dev.log
