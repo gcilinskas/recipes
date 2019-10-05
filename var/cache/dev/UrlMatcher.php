@@ -8,7 +8,6 @@
 return [
     false, // $matchHost
     [ // $staticRoutes
-        '/api/category' => [[['_route' => 'app_api_category_index', '_controller' => 'App\\Controller\\Api\\CategoryController::index'], null, null, null, true, false, null]],
         '/api/home' => [[['_route' => 'app_api_home_index', '_controller' => 'App\\Controller\\Api\\HomeController::index'], null, null, null, true, false, null]],
         '/api/login_check' => [[['_route' => 'app_api_login_checklogin', '_controller' => 'App\\Controller\\Api\\LoginController::checkLogin'], null, null, null, false, false, null]],
         '/api/user/register' => [[['_route' => 'app_api_user_register', '_controller' => 'App\\Controller\\Api\\UserController::register'], null, null, null, false, false, null]],

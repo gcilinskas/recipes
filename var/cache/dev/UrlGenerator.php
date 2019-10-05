@@ -4,7 +4,6 @@
 
 return [
     '_twig_error_test' => [['code', '_format'], ['_controller' => 'twig.controller.preview_error::previewErrorPageAction', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], []],
-    'app_api_category_index' => [[], ['_controller' => 'App\\Controller\\Api\\CategoryController::index'], [], [['text', '/api/category/']], [], []],
     'app_api_home_index' => [[], ['_controller' => 'App\\Controller\\Api\\HomeController::index'], [], [['text', '/api/home/']], [], []],
     'app_api_login_checklogin' => [[], ['_controller' => 'App\\Controller\\Api\\LoginController::checkLogin'], [], [['text', '/api/login_check']], [], []],
     'app_api_user_register' => [[], ['_controller' => 'App\\Controller\\Api\\UserController::register'], [], [['text', '/api/user/register']], [], []],

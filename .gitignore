@@ -6,9 +6,13 @@
 /.env.local.php
 /.env.*.local
 /public/bundles/
+/var/
+/var/cache
 /var
 /vendor/
 /docker/.data
 /docker/logs
 /docker/key
 ###< symfony/framework-bundle ###
+var
+vendor
