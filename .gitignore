@@ -9,5 +9,6 @@
 /var
 /vendor/
 /docker/.data
-/docker/
+/docker/logs
+/docker/key
 ###< symfony/framework-bundle ###
